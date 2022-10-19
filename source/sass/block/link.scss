@@ -1,0 +1,5 @@
+.link {
+  @include desktop {
+    grid-row: 4/-1;
+  }
+}

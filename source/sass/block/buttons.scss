@@ -2,7 +2,7 @@
   position: absolute;
   width: 144px;
   height: 62px;
-  bottom: 43%;
+  top: 650px;
   left: 50%;
   transform: translate(-54%, -50%);
   display: flex;
@@ -11,7 +11,7 @@
   @include desktop {
     width: 474px;
     height: 202px;
-    bottom: 43%;
+    top: 510px;
     left: 26%;
   }
 }
@@ -22,6 +22,7 @@
   background-color: $buttons-background-color;
   width: 60px;
   height: 60px;
+  cursor: pointer;
 
   @include desktop {
     width: 200px;

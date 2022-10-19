@@ -6,6 +6,10 @@
   flex-direction: column;
   margin: 0 auto;
 
+  &--voice {
+    background-color: $table-primary-text-color;
+  }
+
   @include desktop {
     max-width: 1920px;
   }

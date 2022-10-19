@@ -1,0 +1,31 @@
+.buttons {
+  position: absolute;
+  width: 144px;
+  height: 62px;
+  bottom: 43%;
+  left: 50%;
+  transform: translate(-54%, -50%);
+  display: flex;
+  justify-content: space-between;
+
+  @include desktop {
+    width: 474px;
+    height: 202px;
+    bottom: 43%;
+    left: 26%;
+  }
+}
+
+.button {
+  border: none;
+  border-radius: 50%;
+  background-color: $buttons-background-color;
+  width: 60px;
+  height: 60px;
+
+  @include desktop {
+    width: 200px;
+    height: 200px;
+    font-size: 40px;
+  }
+}

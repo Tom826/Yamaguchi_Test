@@ -1,13 +1,80 @@
 .table__title {
   margin: 14px 102px 28px 12px;
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 100%;
   color: $text-color-table-title;
   text-transform: uppercase;
+
+  @include desktop {
+    font-family: "Ubuntu", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 62px;
+    line-height: 100%;
+    text-transform: none;
+    margin-bottom: 30px;
+    max-width: 566px;
+    grid-column: 2/-1;
+    grid-row: 1/2;
+  }
 }
 
 .table__content {
   margin: 0 12px;
+
+  @include desktop {
+    max-width: 500px;
+    grid-column: 2/-1;
+
+    &--material {
+      grid-row: 2/3;
+    }
+
+    &--properties {
+      grid-row: 3/4;
+    }
+  }
 }
 
 .table__tabletop-img {
-  margin-top: 28px;
+  position: absolute;
+  width: 320px;
+  height: 286px;
+  top: 37%;
+
+  @include desktop {
+    width: 976px;
+    height: 782px;
+    top: 0%;
+  }
+}
+
+.table__legs-img {
+  display: block;
+  position: relative;
+
+  @include desktop {
+    width: 976px;
+    height: 782px;
+  }
+}
+
+.table__picture {
+  margin-bottom: 48px;
+
+  @include desktop {
+    grid-row: 1/-1;
+    max-width: 976px;
+  }
+}
+
+.table {
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: 252px;
+    gap: 30px 0;
+  }
 }

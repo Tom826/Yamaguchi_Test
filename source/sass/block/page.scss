@@ -7,4 +7,8 @@
   color: $text-color-primary;
 
   margin: 0;
+
+  @include desktop {
+    font-size: 22px
+  }
 }

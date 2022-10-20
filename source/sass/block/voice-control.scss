@@ -2,8 +2,17 @@
   font-size: 34px;
   line-height: 34px;
   font-weight: 400;
+  margin: 16px 76px 0 16px;
 
-  margin: 16px 76px 32px 16px;
+  @include desktop {
+    grid-row: 1/2;
+    grid-column: 1/2;
+
+    margin: 72px 100px 60px 100px;
+    font-size: 56px;
+    line-height: 72px;
+    max-width: 408px;
+  }
 }
 
 .voice-control__content {
@@ -11,6 +20,100 @@
 }
 
 .voice-control__lady-img {
+  z-index: 20;
   display: block;
+  position: absolute;
   margin: 0 auto;
+  background-color: transparent;
+
+  background-image: url("../img/voice/lady.png");
+  width: 290px;
+  height: 756px;
+  background-repeat: no-repeat;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3%;
+
+  animation-name: ladymob, livitationmob;
+  animation-duration: 6s, 3s;
+  animation-iteration-count: 1, infinite;
+  animation-delay: 0s, 6s;
+
+  @include desktop {
+    grid-row: 2/4;
+    grid-column: 2/3;
+
+    position: relative;
+    bottom: -3%;
+    transform: translateX(-60%);
+
+    animation-name: lady, livitation;
+    animation-duration: 6s, 3s;
+    animation-iteration-count: 1, infinite;
+    animation-delay: 0s, 6s;
+  }
+}
+
+.voice-control__hole {
+  width: 200px;
+  height: 60px;
+  margin: 0 auto;
+
+
+  background-color: black;
+  border-radius: 50%;
+  z-index: 10;
+
+  animation-name: hole;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+
+  @include desktop {
+    order: 3;
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+}
+
+.voice-control__img-wrapper {
+  margin-top: 50px;
+  position: relative;
+  height: 750px;
+  display: flex;
+  align-items: flex-end;
+
+  @include desktop {
+    height: 760px;
+    display: block;
+  }
+}
+
+.voice-control__img {
+  margin-top: 30px;
+
+  @include desktop {
+    grid-row: 1/4;
+    grid-column: 3/4;
+
+    width: 842px;
+    height: 868px;
+  }
+}
+
+.voice-control {
+  @include desktop {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-auto-rows: 250px 500px 250px;
+  }
+}
+
+.voice-control__text-wrapper {
+  @include desktop {
+    grid-row: 2/4;
+    grid-column: 1/2;
+    width: 586px;
+    height: 100%;
+    margin: 30px 0 0 72px;
+  }
 }

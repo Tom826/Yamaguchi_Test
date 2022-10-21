@@ -42,12 +42,10 @@
   position: absolute;
   width: 320px;
   height: 286px;
-  top: 468px;
 
   @include desktop {
     width: 976px;
     height: 782px;
-    top: 0%;
   }
 }
 
@@ -77,4 +75,26 @@
     grid-auto-rows: 252px;
     gap: 30px 0;
   }
+}
+
+.table__tabletop-img--static {
+  top: 468px;
+
+  @include desktop {
+    top: 0%;
+  }
+}
+
+.table__tabletop-img--up {
+  animation-name: tableup;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  top: 456px;
+}
+
+.table__tabletop-img--down {
+  animation-name: tabledown;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  top: 480px;
 }

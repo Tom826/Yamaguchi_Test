@@ -40,12 +40,12 @@ export const html = () => {
     .pipe(gulp.dest('build'));
 }
 
-/*/JS
+//JS
 export const script = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
   .pipe(gulp.dest('build/js'));
-}*/
+}
 
 // Images
 
@@ -64,7 +64,7 @@ const copyImages = () => {
 //WebP
 
 export const createWebp = () => {
-  return gulp.src('source/img/**//*.{jpg,png}')// тут слеш лишний для коммента
+  return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(squoosh({
     webp: {}
   }))
@@ -116,7 +116,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  //gulp.watch('source/js/*.js', gulp.series(script));
+  gulp.watch('source/js/*.js', gulp.series(script));
   gulp.watch('source/*.html', gulp.series(html, reload));
   gulp.watch('source/*.html').on('change', browser.reload);
 
@@ -129,7 +129,7 @@ export const build = gulp.series(
   gulp.parallel(
     styles,
     html,
-    //script,
+    script,
     createWebp
   ),);
 
@@ -140,7 +140,7 @@ export default gulp.series(
   gulp.parallel(
     styles,
     html,
-    //script,
+    script,
     createWebp
   ),gulp.series(
     server,

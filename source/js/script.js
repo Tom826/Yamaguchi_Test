@@ -1,23 +1,23 @@
 /*const nojsElement = document.querySelector('.nojs');
 nojsElement.classList.remove('nojs');
+*/
 
-const buttonToggle = document.querySelector('.toggle');
-const buttonToggleClose = document.querySelector('.toggle--close');
-const navSelector = document.querySelector('.navigation__list');
+const buttonUp = document.querySelector('.button-up');
+const buttonDown = document.querySelector('.button-down');
+const imgSelector = document.querySelector('.table__tabletop-img');
 
 //buttonToggle.classList.remove('navigation__list--closed');
 
-console.dir('buttonToggle');
+console.dir('buttonUp');
 
-const openMenu = function(){
-  navSelector.classList.toggle('navigation__list--closed');
-  navSelector.classList.toggle('navigation__list--open');
+const up = function(){
+  imgSelector.classList.toggle('table__tabletop-img--static');
+  imgSelector.classList.toggle('table__tabletop-img--up');
 }
-const closeMenu = function(){
-  navSelector.classList.toggle('navigation__list--closed');
-  navSelector.classList.toggle('navigation__list--open');
+const down = function(){
+  imgSelector.classList.toggle('table__tabletop-img--static');
+  imgSelector.classList.toggle('table__tabletop-img--down');
 }
 
-buttonToggle.addEventListener('click', openMenu);
-buttonToggleClose.addEventListener('click', closeMenu);
-*/
+buttonUp.addEventListener('click', up);
+buttonDown.addEventListener('click', down);

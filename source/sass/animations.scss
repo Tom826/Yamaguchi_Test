@@ -67,3 +67,23 @@
     bottom: -3%;
   }
 }
+
+@keyframes tableup {
+  0% {
+    top: 468px;
+  }
+
+  100% {
+    top: 456px;
+  }
+}
+
+@keyframes tabledown {
+  0% {
+    top: 468px;
+  }
+
+  100% {
+    top: 480px;
+  }
+}

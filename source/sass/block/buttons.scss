@@ -29,4 +29,15 @@
     height: 200px;
     font-size: 40px;
   }
+
+  &:hover {
+    background-color: $buttons-hover-background-color;
+  }
+
+  &:active {
+    background-color: $buttons-active-background-color;
+    border: 1px dashed $buttons-hover-background-color;
+  }
 }
+
+

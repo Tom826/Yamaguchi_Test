@@ -92,9 +92,9 @@
   top: 456px;
 
   @include desktop {
-  animation-name: tableup-desktop;
-  animation-duration: 500ms;
-  animation-iteration-count: 1;
+    animation-name: tableup-desktop;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
     top: -4%;
   }
 }
@@ -106,9 +106,9 @@
   top: 480px;
 
   @include desktop {
-  animation-name: tabledown-desktop;
-  animation-duration: 500ms;
-  animation-iteration-count: 1;
+    animation-name: tabledown-desktop;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
     top: 4%;
   }
 }

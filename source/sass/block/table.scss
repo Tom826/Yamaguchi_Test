@@ -1,6 +1,6 @@
 .table__title {
   margin: 14px 102px 28px 12px;
-  font-family: "Bebas Neue", Arial, sans-serif;
+  font-family: "Bebas Neue", "Arial", sans-serif;
   font-weight: 700;
   font-size: 38px;
   line-height: 100%;
@@ -8,7 +8,7 @@
   text-transform: uppercase;
 
   @include desktop {
-    font-family: "Ubuntu", Arial, sans-serif;
+    font-family: "Ubuntu", "Arial", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 62px;

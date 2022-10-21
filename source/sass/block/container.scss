@@ -6,22 +6,18 @@
   flex-direction: column;
   margin: 0 auto;
 
-  &--voice {
-    background-color: $table-primary-text-color;
-  }
-
   @include desktop {
     max-width: 1920px;
+  }
+}
 
-    &--voice {
-      @include desktop {
-        background:
-        radial-gradient(circle,$voice-background-color 0,transparent 0)0 0,
-        radial-gradient(circle,$voice-background-color 2px,transparent 4px) 0 20px;
-        background-size:  40px 40px;
-        background-color: $table-primary-text-color;
-        background-repeat: repeat;
-      }
-    }
+.container--voice {
+  background-color: $table-primary-text-color;
+
+  @include desktop {
+    background: radial-gradient(circle, $voice-background-color 0, transparent 0) 0 0, radial-gradient(circle, $voice-background-color 2px, transparent 4px) 0 20px;
+    background-size: 40px 40px;
+    background-color: $table-primary-text-color;
+    background-repeat: repeat;
   }
 }

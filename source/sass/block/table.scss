@@ -86,15 +86,23 @@
 }
 
 .table__tabletop-img--up {
-  animation-name: tableup;
+  animation-name: tableup-desktop;
   animation-duration: 500ms;
   animation-iteration-count: 1;
   top: 456px;
+
+  @include desktop {
+    top: -4%;
+  }
 }
 
 .table__tabletop-img--down {
-  animation-name: tabledown;
+  animation-name: tabledown-desktop;
   animation-duration: 500ms;
   animation-iteration-count: 1;
   top: 480px;
+
+  @include desktop {
+    top: 4%;
+  }
 }

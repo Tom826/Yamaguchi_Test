@@ -87,3 +87,23 @@
     top: 480px;
   }
 }
+
+@keyframes tableup-desktop {
+  0% {
+    top: 0%;
+  }
+
+  100% {
+    top: -4%;
+  }
+}
+
+@keyframes tabledown-desktop {
+  0% {
+    top: 0%;
+  }
+
+  100% {
+    top: 4%;
+  }
+}
